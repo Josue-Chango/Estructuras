@@ -571,3 +571,118 @@ Desarrollando el cálculo:
 \[s = \sqrt{33.6}\]
 
 \[s = 5.8\]
+
+### (E) Calcular la proporción de valores de datos comprendidos entre $\bar{x} \pm 2s$
+
+\[\bar{x}±2s=6.115±2(5.8)=6.115±11.6\]
+ 
+Los valores comprendidos entre $-5.485$ y $17.715$ son:
+2.4, 3.3, 4.1, 5.0, 5.1, 5.2, 5.6, 5.8, 5.9, 5.9, 6.0, 6.1, 6.2, 6.3, 6.3, 6.4, 6.4, 6.5, 6.7, 6.8, 7.2, 7.4, 7.5, 7.5, 7.6, 7.6, 7.7, 7.8, 7.8, 7.9, 7.9, 8.3, 8.5, 8.8, 9.2, 9.7, 9.8, 9.9, 10.0, 10.3, 10.5
+
+Número de valores comprendidos: $40$
+Proporción de valores comprendidos: $40/40 = 1 = 100\%$
+
+### (F) Los datos parecen ser aproximadamente normales
+
+Sí, los datos parecen ser aproximadamente normales, ya que la mayoría de los valores se encuentran dentro de $\bar{x} \pm 2s$, lo cual es característico de una distribución normal.
+
+## 2
+Una cafetería ofrece un menú con tres platos. Se puede elegir un plato principal, un complemento y un postre. Las elecciones posibles de cada uno son las siguientes
+
+```{r}
+
+library(knitr)
+library(kableExtra)
+
+# Crear los datos
+menu <- data.frame(
+  Menú = c("Plato principal", "Complemento", "Postre"),
+  Elección = c("Pollo o filete", "Pasta, arroz o patata", "Helado, gelatina o tarta de manzana")
+)
+
+# Generar la tabla con formato
+kable(menu, align = 'l', col.names = c("Menú", "Elección")) %>%
+  kable_styling(full_width = F, bootstrap_options = c("striped", "hover", "condensed", "responsive"))
+```
+Cada individuo debe elegir un elemento de cada categoría.
+
+### (A) Liste todos los resultados del espacio muestral $S$.
+El espacio muestral $S$ contiene todas las posibles combinaciones de plato principal, complemento y postre. Dado que cada categoría tiene $3$ opciones, el espacio muestral $S$ tendrá $3 x 3 x 3 = 27$ elementos.
+
+Los resultados del espacio muestral $S$ son:
+
+\[(Pollo, Pasta, Helado), (Pollo, Pasta, Gelatina), (Pollo, Pasta, Tarta de manzana),\]
+\[(Pollo, Arroz, Helado), (Pollo, Arroz, Gelatina), (Pollo, Arroz, Tarta de manzana),\]
+\[(Pollo, Patata, Helado), (Pollo, Patata, Gelatina), (Pollo, Patata, Tarta de manzana),\]
+\[(Filete, Pasta, Helado), (Filete, Pasta, Gelatina), (Filete, Pasta, Tarta de manzana),\]
+\[(Filete, Arroz, Helado), (Filete, Arroz, Gelatina), (Filete, Arroz, Tarta de manzana),\]
+\[(Filete, Patata, Helado), (Filete, Patata, Gelatina), (Filete, Patata, Tarta de manzana)\]
+
+### (B) Si A es el suceso consistente en que se elija helado, liste los resultados de A.
+
+El suceso A es "elegir helado como postre". Los resultados de A son:
+
+\[(Pollo, Pasta, Helado), (Pollo, Arroz, Helado), (Pollo, Patata, Helado),\]
+\[(Filete, Pasta, Helado), (Filete, Arroz, Helado), (Filete, Patata, Helado)\]
+
+### (C) Si B es el suceso consistente en que se elija pollo, liste los resultados de B.
+
+El suceso B es "elegir pollo como plato principal". Los resultados de B son:
+
+\[(Pollo, Pasta, Helado), (Pollo, Pasta, Gelatina), (Pollo, Pasta, Tarta de manzana),\]
+\[(Pollo, Arroz, Helado), (Pollo, Arroz, Gelatina), (Pollo, Arroz, Tarta de manzana),\]
+\[(Pollo, Patata, Helado), (Pollo, Patata, Gelatina), (Pollo, Patata, Tarta de manzana)\]
+
+### (D) Liste todos los resultados de $A ∩ B$.
+
+$A ∩ B$ es el suceso "elegir pollo como plato principal y helado como postre". Los resultados son:
+
+\[(Pollo, Pasta, Helado), (Pollo, Arroz, Helado), (Pollo, Patata, Helado)\]
+
+### (E) Si $C$ es el suceso consistente en que se elija arroz, liste los resultados de $C$.
+
+El suceso $C$ es "elegir arroz como complemento". Los resultados de $C$ son:
+
+\[(Pollo, Arroz, Helado), (Pollo, Arroz, Gelatina), (Pollo, Arroz, Tarta de manzana),\]
+\[(Filete, Arroz, Helado), (Filete, Arroz, Gelatina), (Filete, Arroz, Tarta de manzana)\]
+
+### (F) Liste todos los resultados del suceso $A ∩ B ∩ C$.
+
+$A ∩ B ∩ C$ es el suceso "elegir pollo como plato principal, arroz como complemento y helado como postre". Los resultados son:
+
+\[(Pollo, Arroz, Helado)\]
+
+## 3
+Las soldaduras de juntas tubulares pueden tener dos tipos de defectos, que se denominarán $A$ y $B$. Cada soldadura puede tener el defecto $A$ con probabilidad $0,064$, y el defecto $B$ con probabilidad $0.043$, y ambos defectos con probabilidad $0.025$. Encuentre la proporción de soldaduras que:
+
+### (A) Tienen el defecto A o el defecto $B$.
+
+Para calcular la proporción de soldaduras que tienen el defecto $A$ o el defecto $B$, debemos sumar las probabilidades individuales de cada defecto, teniendo en cuenta que pueden ocurrir de forma independiente.
+
+Probabilidad de tener el defecto $A: 0.064$
+Probabilidad de tener el defecto $B: 0.043$
+Probabilidad de tener el defecto $A$ o el defecto $B: 0.064 + 0.043 = 0.107$
+
+Por lo tanto, la proporción de soldaduras que tienen el defecto $A$ o el defecto $B$ es $0.107$ o $10.7\%$.
+
+### (B) No tienen defecto alguno.
+
+Para calcular la proporción de soldaduras que no tienen ningún defecto, debemos encontrar la probabilidad complementaria de tener al menos un defecto.
+
+Probabilidad de tener al menos un defecto: $0.064 + 0.043 - 0.025 = 0.082$
+Probabilidad de no tener ningún defecto: $1 - 0.082 = 0.918$
+
+Por lo tanto, la proporción de soldaduras que no tienen defecto alguno es $0.918$ o $91.8\%$.
+
+## 4
+Los pozos de petróleo perforados en la región A tienen una probabilidad de $0.2$ de producir. Los pozos perforados en la región B tienen una probabilidad de $0.09$. Se perfora un pozo en cada región. Suponga que los pozos producen de manera independiente.
+
+### (A) ¿Cuál es la probabilidad de que ambos pozos produzcan?
+Probabilidad de que ambos pozos produzcan $= 0.2 × 0.09 = 0.018$ o $1.8\%$
+
+### (B) ¿Cuál es la probabilidad de que ninguno produzca?
+Probabilidad de que ninguno produzca $= (1-0.2) × (1-0.09) = 0.728$ o $72.8\%$
+
+### (C) ¿Cuál es la probabilidad de que al menos uno produzca?
+Probabilidad de que al menos uno produzca $= 1 - 0.728 = 0.272$ o $27.2\%$
+
