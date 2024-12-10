@@ -1426,7 +1426,173 @@ cantidad es:</p>
 </div>
 <div id="d-los-salarios-de-la-esposa-y-el-marido-son-independientes" class="section level3">
 <h3>(D) ¿Los salarios de la esposa y el marido son independientes?</h3>
-<p>No, los salarios de la esposa y el marido no son independientes</p>
+<p>No, los salarios de la esposa y el marido no son independientes,
+porque se condicionan.</p>
+</div>
+</div>
+<div id="section-7" class="section level2">
+<h2>11</h2>
+<p>Cierto tipo de componente está empaquetado en lotes de cuatro. Sea
+<span class="math inline">\(X\)</span> el número de componentes que
+funcionan de modo adecuado en un lote elegido de manera aleatoria.
+Suponga que la probabilidad de que evwtamente <span class="math inline">\(x\)</span> componentes funcionen es proporcional a
+<span class="math inline">\(x\)</span>; en otras palabras. suponga que
+la función de masa de probabilidad de <span class="math inline">\(X\)</span> es dada por: <span class="math display">\[p(x) =
+\begin{cases}
+cx &amp; x = 1, 2, 3, 4, \\
+0 &amp; \text{de otro modo}.
+\end{cases}\]</span> donde c es una constante.</p>
+<div id="a-determinar-el-valor-de-la-constante-c-para-que-px-sea-una-función-de-masa-de-probabilidad." class="section level3">
+<h3>(A) Determinar el valor de la constante c para que p(x) sea una
+función de masa de probabilidad.</h3>
+<p>Para que <span class="math inline">\(p(x)\)</span> sea una función de
+masa de probabilidad, debe cumplir que:</p>
+<p><span class="math inline">\(p(x) ≥ 0\)</span> para todo <span class="math inline">\(x\)</span></p>
+<p><span class="math inline">\(\sum p(x) = 1\)</span> (la suma de las
+probabilidades debe ser igual a 1) Reemplazando en la función dada:</p>
+<p><span class="math inline">\(p(x) = cx\)</span>, para <span class="math inline">\(x = 1, 2, 3, 4\)</span></p>
+<p><span class="math inline">\(p(x) = 0\)</span>, para cualquier otro
+valor de <span class="math inline">\(x\)</span></p>
+<p>Aplicando la condición <span class="math inline">\(2\)</span>:</p>
+<p><span class="math inline">\(\sum p(x) = c(1 + 2 + 3 + 4) = c * 10 =
+1\)</span></p>
+<p><span class="math inline">\(c = 1/10 = 0.1\)</span></p>
+<p>Por lo tanto, el valor de la constante <span class="math inline">\(c\)</span> es <span class="math inline">\(0.1\)</span>.</p>
+</div>
+<div id="b-determinar-px-2." class="section level3">
+<h3>(B) Determinar <span class="math inline">\(P(X = 2)\)</span>.</h3>
+<p>Reemplazando en la función de masa de probabilidad:</p>
+<p><span class="math inline">\(P(X = 2) = c * 2 = 0.1 * 2 =
+0.2\)</span></p>
+</div>
+<div id="c-determinar-la-media-del-número-de-componentes-que-funcionan-adecuadamente." class="section level3">
+<h3>(C) Determinar la media del número de componentes que funcionan
+adecuadamente.</h3>
+<p>La media de una variable aleatoria discreta <span class="math inline">\(X\)</span> se calcula como:</p>
+<p><span class="math inline">\(E[X] = \sum x * p(x)\)</span></p>
+<p>Reemplazando:</p>
+<p><span class="math inline">\(E[X] = 1 * 0.1 + 2 * 0.2 + 3 * 0.3 + 4 *
+0.4 = 2.9\)</span></p>
+<p>Por lo tanto, la media del número de componentes que funcionan
+adecuadamente es <span class="math inline">\(2.9\)</span>.</p>
+</div>
+<div id="ddeterminar-la-varianza-del-número-de-componentes-que-funcionan-adecuadamente." class="section level3">
+<h3>(D)Determinar la varianza del número de componentes que funcionan
+adecuadamente.</h3>
+<p>La varianza de una variable aleatoria discreta <span class="math inline">\(X\)</span> se calcula como:</p>
+<p><span class="math inline">\(V(X) = \sum (x - E[X])^2 *
+p(x)\)</span></p>
+<p>Reemplazando:</p>
+<p><span class="math inline">\(V(X) = (1 - 2.9)^2 * 0.1 + (2 - 2.9)^2 *
+0.2 + (3 - 2.9)^2 * 0.3 + (4 - 2.9)^2 * 0.4 = 1.21\)</span></p>
+</div>
+<div id="e-determinar-la-desviación-estándar-del-número-de-componentes-que-funcionan-adecuadamente." class="section level3">
+<h3>(E) Determinar la desviación estándar del número de componentes que
+funcionan adecuadamente.</h3>
+<p>La desviación estándar se calcula como la raíz cuadrada de la
+varianza: Desviación estándar <span class="math inline">\(-&gt;
+\sqrt{r(x)} = \sqrt{1.21} = 1.1\)</span></p>
+</div>
+</div>
+<div id="section-8" class="section level2">
+<h2>12</h2>
+<p>Las partículas son un componente muy importante de la contaminación
+atmosférica en muchas áreas. Es interesante estudiar los tamaños de las
+partículas contaminantes. Sea <span class="math inline">\(x\)</span> el
+diámetro, en micrómetros, de una panícula elegida aleatoriamente.
+Suponga que en cierta área. la función de densidad de probabilidad de
+<span class="math inline">\(X\)</span> es inversamente proporcional al
+volumen de la partícula; es decir, suponga que:</p>
+<p><span class="math display">\[f(x) =
+\begin{cases}
+\frac{c}{x^3} &amp; x \geq 1 \\
+0 &amp; x&lt;1.
+\end{cases}\]</span> donde <span class="math inline">\(c\)</span> es una
+constante.</p>
+<div id="a-determinar-el-valor-de-c-para-que-fx-sea-una-función-de-densidad-de-probabilidad." class="section level3">
+<h3>(A) Determinar el valor de <span class="math inline">\(c\)</span>
+para que <span class="math inline">\(f(x)\)</span> sea una función de
+densidad de probabilidad.</h3>
+<p>Para que <span class="math inline">\(f(x)\)</span> sea una función de
+densidad de probabilidad, debe cumplir que:</p>
+<p><span class="math inline">\(f(x) \geq 0\)</span> para todo <span class="math inline">\(x\)</span> <span class="math inline">\(\int f(x)
+dx = 1\)</span> (el área bajo la curva debe ser igual a 1) Reemplazando
+en la función dada:</p>
+<p><span class="math inline">\(f(x) = \frac{c}{x^3}\)</span>, para <span class="math inline">\(x \geq 1\)</span> <span class="math inline">\(f(x)
+= 0\)</span>, para <span class="math inline">\(0 \geq x &lt;
+1\)</span></p>
+<p>Aplicando la condición <span class="math inline">\(2\)</span>:</p>
+<p><span class="math inline">\(\int f(x) dx = \int (\frac{c}{x^3}) dx =
+c \int (\frac{1}{x^3}) dx = c * (\frac{-1}{2x^2}) |_1^\infty = c *
+(\frac{-1}{2} + \frac{1}{2}) = c\)</span></p>
+<p><span class="math inline">\(c = 1\)</span></p>
+<p>Por lo tanto, el valor de la constante <span class="math inline">\(c\)</span> es <span class="math inline">\(1\)</span>.</p>
+</div>
+<div id="b-determinar-la-media-del-diámetro-de-la-partícula." class="section level3">
+<h3>(B) Determinar la media del diámetro de la partícula.</h3>
+<p>La media de una variable aleatoria continua <span class="math inline">\(x\)</span> se calcula como:</p>
+<p><span class="math inline">\(E[X] = \int x * f(x) dx\)</span></p>
+<p>Reemplazando:</p>
+<p><span class="math inline">\(E[X] = \int x * (\frac{1}{x^3}) dx = \int
+(\frac{1}{x^2}) dx = \frac{-1}{x} |_1^\infty = \frac{-1}{1} +
+\frac{1}{\infty} = 2\)</span></p>
+<p>Por lo tanto, la media del diámetro de la partícula es <span class="math inline">\(2\)</span> micrómetros.</p>
+</div>
+<div id="c-determinar-la-función-de-distribución-acumulativa-del-diámetro-de-la-partícula." class="section level3">
+<h3>(C) Determinar la función de distribución acumulativa del diámetro
+de la partícula.</h3>
+<p>La función de distribución acumulativa de una variable aleatoria
+continua <span class="math inline">\(x\)</span> se calcula como:</p>
+<p><span class="math inline">\(F(x) = \int f(t) dt\)</span>, para <span class="math inline">\(t \leq x\)</span></p>
+<p>Reemplazando:</p>
+<p><span class="math inline">\(F(x) = \int (\frac{1}{t^3}) dt =
+\frac{-1}{2t^2} |_1^x = \frac{-1}{2x^2} + \frac{1}{2}\)</span>, para
+<span class="math inline">\(x \geq 1\)</span></p>
+<p><span class="math inline">\(F(x) = 0\)</span>, para <span class="math inline">\(0 \leq x &lt; 1\)</span></p>
+</div>
+<div id="d-determinar-la-mediana-del-diámetro-de-la-partícula." class="section level3">
+<h3>(D) Determinar la mediana del diámetro de la partícula.</h3>
+<p>La mediana es el valor de <span class="math inline">\(x\)</span> tal
+que <span class="math inline">\(F(x) = 0.5\)</span>. Resolviendo la
+ecuación:</p>
+<p><span class="math inline">\(\frac{-1}{2x^2} + \frac{1}{2} =
+0.5\)</span></p>
+<p><span class="math inline">\(x^2 = 2\)</span> <span class="math inline">\(x = \sqrt{2} \approx 1.41\)</span> micrómetros</p>
+</div>
+<div id="e-el-término-pm10-se-refiere-a-partículas-con-diámetros-menores-o-iguales-a-10-mu-m.-qué-proporción-de-partículas-contaminantes-son-pm10" class="section level3">
+<h3>(E) El término <span class="math inline">\(PM10\)</span> se refiere
+a partículas con diámetros menores o iguales a <span class="math inline">\(10 \mu m\)</span>. ¿Qué proporción de partículas
+contaminantes son <span class="math inline">\(PM10\)</span>?</h3>
+<p>La proporción de partículas contaminantes con diámetro menor o igual
+a <span class="math inline">\(10 \mu m\)</span> se calcula como:</p>
+<p><span class="math inline">\(F(10) = \frac{-1}{2(10)^2} + \frac{1}{2}
+= 0.75\)</span></p>
+<p>Por lo tanto, la proporción de partículas contaminantes que son <span class="math inline">\(PM10\)</span> es <span class="math inline">\(0.75\)</span></p>
+</div>
+<div id="section-9" class="section level3">
+<h3>13</h3>
+<p>La tabla siguiente presenta la función de masa de probabilidad del
+número de defectos <span class="math inline">\(x\)</span> en un tablero
+de circuitos impresos elegido aleatoriamente.</p>
+<p><span class="math display">\[
+\begin{array}{|c|c|c|c|c|}
+\hline
+x     &amp; 0   &amp; 1   &amp; 2   &amp; 3   \\ \hline
+p(x)  &amp; 0.5 &amp; 0.3 &amp; 0.1 &amp; 0.1 \\ \hline
+\end{array}
+\]</span></p>
+</div>
+<div id="a-determinar-px-2." class="section level3">
+<h3>(A) Determinar <span class="math inline">\(P(x &lt;
+2)\)</span>.</h3>
+<p>De la tabla de probabilidades, se tiene que:</p>
+<p><span class="math inline">\(P(x = 0) = 0.5\)</span></p>
+<p><span class="math inline">\(P(x = 1) = 0.3\)</span></p>
+<p><span class="math inline">\(P(x = 2) = 0.1\)</span></p>
+<p>Por lo tanto, la probabilidad de que el número de defectos sea menor
+a <span class="math inline">\(2\)</span> es:</p>
+<p><span class="math inline">\(P(x &lt; 2) = P(x = 0) + P(x = 1) = 0.5 +
+0.3 = 0.8\)</span></p>
 </div>
 </div>
 
