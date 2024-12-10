@@ -686,3 +686,65 @@ Probabilidad de que ninguno produzca $= (1-0.2) × (1-0.09) = 0.728$ o $72.8\%$
 ### (C) ¿Cuál es la probabilidad de que al menos uno produzca?
 Probabilidad de que al menos uno produzca $= 1 - 0.728 = 0.272$ o $27.2\%$
 
+## 5
+De todas las fallas de un tipo determinado de unidad de disco duro de computadora, se determina que $20\%$ de éstos tiene dañado sólo el sector que contiene la tabla de asignación de archivos, en $70\%$ sólo los sectores no esenciales están dañados y en $10\%$ tanto el sector de asignación como uno o más sectores no esenciales están dañados. Se selecciona aleatoriamente una unidad de disco dañada y se examina.
+
+### (A) ¿Cuál es la probabilidad de que el sector de asignación esté dañado?
+$P(L)$ $+$ $P(L$^$S)$ $-> 0.20 + 0.1 = 0.30$
+
+### (B) ¿Cuál es la probabilidad de que un sector no esencial esté dañado?
+$P(S U (L$^$S)) = P(S) + P(L$^$S) -> 0.7 + 0.1 = 0.8$
+
+### (C) Si se encuentra que la unidad de disco tiene un sector de asignación dañado, ¿cuál es la probabilidad de que algunos sectores no esenciales también estén dañados?
+$P(L|S) = \frac{P(L S)}{P(L U (L S))} = \frac{0.1}{0.3} = 0.33$
+
+##6
+Un sistema de aspersión automático especial tiene dos tipos diferentes de dispositivos de activación para cada regadera. Un tipo tiene una confiabilidad de $0,9$; es decir. la probabilidad de que se active cuando debe el aspersor es $0.9$. EI otro tipo, que opera independientemente del primer tipo, tiene una confiabilidad de $0.8$. Si se dispara cualquier dispositivo, el aspersor se activará. Suponga que empieza un fuego cerca de una regadera.
+
+### (A) ¿Cuál es la probabilidad de que la regadera se active?
+Dispositivos se operan de manera distinta (independientes), por tanto
+Probabilidad de que la regadera se active $1 - (1 - 0.9) × (1 - 0.8) = 0.98$
+
+### (B) ¿Cuál es la probabilidad de que la regadera no se active?
+Probabilidad de que la regadera no se active $1 - 0.98 = 0.02$
+
+### (C) ¿Cuál es la probabilidad de que ambos dispositivos de activación trabajen adecuadamente?
+Dispositivos operan de manera independiente
+Probabilidad de que ambos dispositivos trabajen adecuadamente $0.9 × 0.8 = 0.72$
+
+### (D) ¿Cuál es la probabilidad de que solo el dispositivo con 0.9 de confiabilidad trabaje adecuadamente?
+Dispositivos operan de manera independiente
+Probabilidad de que el dispositivo con $0.8$ falle es $1 - 0.8 = 0.2$
+Probabilidad de que solo el dispositivo con $0.9$ trabaje adecuadamente $0.9 × 0.2 = 0.18$
+
+## 9
+En una ciudad, el $52\%$ de los residentes con edad de votar son republicanos, y el otro $48\%$ son demócratas. Entre los residentes, un de los republicanos Y' un $42\%$ de los demócratas se muestran a favor de que se suspenda una política activa de alquileres promovida por el ayuntamiento. Se selecciona aleatoriamente a un residente con derecho a voto.
+
+### (A) ¿Cuál es la probabilidad de que la persona elegida esté a favor de que se suspenda la política de alquileres?
+Probabilidad de que sea republicana y esté a favor $0.52 × 0.64 = 0.3328$
+
+Probabilidad de que sea demócrata y esté a favor $0.48 × 0.42 = 0.2016$
+
+Probabilidad total de que la persona elegida esté a favor $0.3328 + 0.2016 = 0.5344$
+
+### (B) Si la persona elegida está en contra de que se suspenda la política de alquileres, ¿cuál es la probabilidad de que sea republicana?
+Probabilidad de que sea republicana $\frac{0.52 × 0.36}{0.52 × 0.36 + 0.48 × 0.58} = 0.6154$
+
+## 10 
+A un total de $500$ parejas trabajadoras casadas se les preguntó si cada uno de sus miembros tenía un salario por encima de los $75 000 \$$. Se obtuvo la siguiente información:
+
+### (A) ¿Cuál es la probabilidad de que el marido gane menos de $75 000 \$ $?
+Probabilidad de que el marido gane menos de $75 000 \$ -> 212 / 500 = 0.424$
+
+### (B) Si el marido gana más de $75 000 \$$, ¿cuál es la probabilidad condicionada de que la esposa gane más de esta cantidad?
+La probabilidad condicionada de que la esposa gane más de $75 000 \$$ si el marido gana más de esta cantidad es:
+
+Probabilidad condicionada  $-> \frac{54}{54} = 1$
+
+### (C) Si el marido gana menos de $75 000 \$$, ¿cuál es la probabilidad condicionada de que la esposa gane más de esta cantidad?
+La probabilidad condicionada de que la esposa gane más de $75 000 \$$ si el marido gana menos de esta cantidad es:
+
+Probabilidad condicionada $-> \frac{36}{212} = 0.1698$
+
+### (D) ¿Los salarios de la esposa y el marido son independientes?
+No, los salarios de la esposa y el marido no son independientes, porque se condicionan.
