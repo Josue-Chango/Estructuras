@@ -1251,3 +1251,115 @@ $P(Z \leq z) = 0.99$
 $z = 2.326$
 
 $x = 510 + 2.326 * 92 = 704.13$
+
+# EJERCICIOS TEORICOS PROPUESTOS
+
+## 2
+Considere cinco números y suponga que la media de los cuatro primeros es 14.
+
+### (A) Si el quinto número es $24$. ¿cuál es la media de los cinco números?
+
+Sabemos que la media de los cuatro primeros números es $14$, por lo que la suma de esos cuatro números es $14 * 4 = 56$
+
+Ahora, sumamos el quinto número $24$ a los cuatro primeros:
+
+$56 + 24 = 80$
+
+Finalmente, para obtener la media de los cinco números:
+
+$\frac{80}{5} = 16$
+
+### (B) Si la media de los cinco números es $24$, ¿cuál es el valor del quinto número?
+
+Sabemos que la media de los cinco números es $24$, por lo que la suma de los cinco números es $24 * 5 = 120$
+
+También sabemos que la suma de los cuatro primeros números es
+
+$14 * 4 = 56.$
+
+Entonces, el quinto número debe ser:
+
+$120 - 56 = 64$
+
+## 3
+La mediana de un conjunto de datos simétrico es igual a $40$ y su tercer cuartil es igual a 55
+¿Cuál es valor del primer cuartil?
+
+$Q1 = 2 * \text{ mediana} - Q3$
+
+Sustituyendo los valores dados:
+
+$Q1 = 2 * 40 - 55$
+
+$Q1 = 80 - 55$
+
+$Q1 = 25$
+
+## 4
+Supongamos que se dispone de dos muestras distintas, de tamaños $n_1$ y $n_2$. Si la media muestral de la primera muestra es $x_1$ y la de la segunda muestra es $x_2$, ¿cuál es la media de la muestra conjunta, de tamaño $n_1 + n_2$?
+
+Media de la muestra conjunta $= \frac{n1 * x1 + n2 * x2}{n1 + n2}$
+
+## 6
+Si $E[3X + 10] = 70$, ¿cuál es ei valor de $E[X]$?
+
+$a=3$ y $b=10$
+
+entonces:
+
+$E[aX + b] = aE[X]+b$
+
+reemplazamos:
+
+$E[3X + 10] = 3E[X]+10$
+
+$70 = 3E[X]+10$
+
+$70-10 = 3E[X]$
+
+$\frac{60}{3} = E[X]$
+
+$E[X] = 20$
+
+## 8
+Si $V(2X + 3)= 16 \text{, ¿cuál es el valor de }SD(X)$?
+
+$V(aX+b) = a^2V(X)$
+
+$V(2X+3) = 2^2V(X)$
+
+$16=4V(X)$
+
+$V(X) = 4$
+
+$SD(X) = \sqrt{4} = 2$
+
+## 9
+Si $X$ e $Y$ son variables aleatorias independientes, ambas con varianza 1, calcule :
+
+### (A) $V(X+Y)$
+
+Dado que $X$ e $Y$ son variables aleatorias independientes, la varianza de la suma es la suma de las varianzas individuales. Por lo tanto, $V(X + Y) = V(X) + V(Y) = 1 + 1 = 2.$
+
+### (B) $V(X-Y)$
+
+Dado que $X$ e $Y$ son variables aleatorias independientes, la varianza de la diferencia es la suma de las varianzas individuales. Por lo tanto, $V(X - Y) = V(X) + V(Y) = 1 + 1 = 2$
+
+## 10
+Suponga que $E[X] = \mu$ y $SD(X) = \alpha$. Sea
+\[
+Y=\frac{X-\mu}{\alpha}
+\]
+
+### (A) Demuestre que $E[Y] = 0$
+
+Dado que $E[X] = \mu\text{, entonces} E[Y] = \frac{\mu - \mu}{σ} = 0$
+
+### (B) Demuestre que $V(Y) = 1$
+
+Dado que $V(X) = SD(X)^2 = \alpha^2$, entonces $V(Y) = V(\frac{X - \mu}{\alpha}) = \frac{V(X)}{\alpha^2} = 1.$
+
+# EJERCICIOS PARA RESOLUCION INFORMÁTICA
+
+## 1
+EI artículo "Hydrogeochemical Characteristics of Groundwater in a Mid-Western Coastal Aquifer System" (S. Jeen,J. Kim y colaboradores, Geosciences Journal, 2001:339-348) presenta las mediciones de las propiedades de algunas aguas subterráneas poco profundas en cierto sistema de acuífero de Corea. Las siguientes son las mediciones de la conductividad eléctrica (en microsiemens por centímetro) para 23 muestras de agua.
