@@ -1874,7 +1874,7 @@ aleatoria normal con desviación típica <span class="math inline">\(3\)</span>,
 0.975\)</span>, por lo que:</p>
 <p><span class="math inline">\(P(X \leq 16) = 1 - 0.975 =
 0.025\)</span></p>
-<p><span class="math inline">\(z = \frac{X - \mu}{{\alpha}\)</span></p>
+<p><span class="math inline">\(z = \frac{X - \mu}{\alpha}\)</span></p>
 <p><span class="math inline">\(-1.96 = \frac{16 - \mu}{3}\)</span></p>
 <p><span class="math inline">\(\mu = 16 + 1.96 * 3 = 22\)</span></p>
 <div id="a-20" class="section level3">
@@ -1901,8 +1901,8 @@ aleatoria normal con valor esperado <span class="math inline">\(100\)</span> y d
 <span class="math inline">\(X\)</span> o <span class="math inline">\(Y\)</span>, tiene mayor probabilidad de que:</p>
 <div id="a-sobrepase-104" class="section level3">
 <h3>(A) Sobrepase <span class="math inline">\(104\)</span></h3>
-<p>Para <span class="math inline">\(X: P(X &gt; 104) = 1 - P(X \leq
-104)= 1 - P(\frac{X - 100}{2}\leq 2}\)</span> = <span class="math inline">\(1 - 0.9772 = 0.0228\)</span></p>
+<p>Para <span class="math inline">\(X: P(X &gt; 104) = 1 - P(X\leq 104)=
+1 - P(\frac{X - 100}{2}\leq 2) = 1 - 0.9772 = 0.0228\)</span></p>
 <p>Para <span class="math inline">\(Y: P(Y &gt; 104) = 1 - P(Y \leq 104)
 = 1 - P(\frac{Y - 105}{10} \leq -0.1) = 1 - 0.5398 = 0.4602\)</span></p>
 <p>Por lo tanto, <span class="math inline">\(Y\)</span> tiene mayor
@@ -1924,6 +1924,71 @@ probabilidad de sobrepesar <span class="math inline">\(96\)</span></p>
 <p>Para <span class="math inline">\(Y: P(Y &gt; 100) = 1 - P(Y \leq 100)
 = 1 - P(\frac{Y - 105}{10} \leq -0.5) = 1 - 0.3085 = 0.6915\)</span></p>
 <p>Por lo tanto, Y tiene mayor probabilidad de sobrepesar <span class="math inline">\(100\)</span></p>
+</div>
+</div>
+<div id="section-19" class="section level2">
+<h2>29</h2>
+<p>Suponga que la estatura de mujeres en una población sigue la curva
+normal con media de <span class="math inline">\(64,3\)</span> pulgadas y
+desviación estándar de <span class="math inline">\(2.6\)</span>
+pulgadas.</p>
+<div id="a-qué-proporción-de-mujeres-tiene-estatura-entre-60-y-66-pulgadas" class="section level3">
+<h3>(A) ¿Qué proporción de mujeres tiene estatura entre <span class="math inline">\(60\)</span> y <span class="math inline">\(66\)</span> pulgadas?</h3>
+<p><span class="math inline">\(z = \frac{60 - 64.3}{2.6} =
+-1.65\)</span></p>
+<p><span class="math inline">\(z = \frac{66 - 64.3}{2.6} =
+0.65\)</span></p>
+<p><span class="math inline">\(P(Z \leq 0.65) - P(Z \leq -1.65) = 0.7422
+- 0.0495 = 0.6927\)</span></p>
+</div>
+<div id="b-la-estatura-de-una-mujer-es-0.5-de-desviación-estándar-mayor-a-la-media.-qué-proporción-de-mujeres-mide-más-que-ella" class="section level3">
+<h3>(B) La estatura de una mujer es <span class="math inline">\(0.5\)</span> de desviación estándar mayor a la
+media. ¿Qué proporción de mujeres mide más que ella?</h3>
+<p><span class="math inline">\(z = \frac{64.3 + 0.5 * 2.6 - 64.3}{2.6} =
+0.5\)</span></p>
+<p><span class="math inline">\(P(Z &gt; 0.5) = 1 - P(Z \leq 0.5) = 1 -
+0.6915 = 0.3085\)</span></p>
+</div>
+</div>
+<div id="section-20" class="section level2">
+<h2>30</h2>
+<p>Las calificaciones de la parte cuantitativa del examen de graduación
+se distribuyen nor malmente con una calificación media <span class="math inline">\(510\)</span> y desviación típica <span class="math inline">\(92\)</span>. Calcule cuál es la calilicación que
+se necesita obtener para estar en el</p>
+<div id="a-10-superior-de-todas-las-calificaciones" class="section level3">
+<h3>(A) <span class="math inline">\(10\%\)</span> superior de todas las
+calificaciones</h3>
+<p>Para encontrar la calificación que se encuentra en el <span class="math inline">\(10\%\)</span> superior, debemos calcular el valor
+<span class="math inline">\(z\)</span> correspondiente a <span class="math inline">\(0.90 (1 - 0.10)\)</span> en la distribución normal
+estándar:</p>
+<p><span class="math inline">\(z = \frac{x - 510}{92}\)</span></p>
+<p><span class="math inline">\(P(Z \leq z) = 0.90\)</span></p>
+<p><span class="math inline">\(z = 1.28\)</span></p>
+<p><span class="math inline">\(x = 510 + 1.28 * 92 = 627.76\)</span></p>
+</div>
+<div id="b-5-superior-de-todas-las-calificaciones" class="section level3">
+<h3>(B) <span class="math inline">\(5\%\)</span> superior de todas las
+calificaciones</h3>
+<p>Para encontrar la calificación que se encuentra en el <span class="math inline">\(5\%\)</span> superior, debemos calcular el valor
+<span class="math inline">\(z\)</span> correspondiente a <span class="math inline">\(0.95 (1 - 0.05)\)</span> en la distribución normal
+estándar:</p>
+<p><span class="math inline">\(z = \frac{x - 510}{92}\)</span></p>
+<p><span class="math inline">\(P(Z \leq z) = 0.95\)</span></p>
+<p><span class="math inline">\(z = 1.645\)</span></p>
+<p><span class="math inline">\(x = 510 + 1.645 * 92 =
+661.34\)</span></p>
+</div>
+<div id="c-1-q-superior-de-todas-las-calificaciones" class="section level3">
+<h3>(C) <span class="math inline">\(1\%\)</span> q superior de todas las
+calificaciones</h3>
+<p>Para encontrar la calificación que se encuentra en el <span class="math inline">\(1\%\)</span> superior, debemos calcular el valor
+<span class="math inline">\(z\)</span> correspondiente a <span class="math inline">\(0.99 (1 - 0.01)\)</span> en la distribución normal
+estándar:</p>
+<p><span class="math inline">\(z = \frac{x - 510}{92}\)</span></p>
+<p><span class="math inline">\(P(Z \leq z) = 0.99\)</span></p>
+<p><span class="math inline">\(z = 2.326\)</span></p>
+<p><span class="math inline">\(x = 510 + 2.326 * 92 =
+704.13\)</span></p>
 </div>
 </div>
 
