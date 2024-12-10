@@ -906,3 +906,290 @@ $P(x = 2) = 0.1$
 Por lo tanto, la probabilidad de que el número de defectos sea menor a $2$ es:
 
 $P(x < 2) = P(x = 0) + P(x = 1) = 0.5 + 0.3 = 0.8$
+
+### (B) Determinar P(X ≥ 1).
+
+La probabilidad de que el número de defectos sea mayor o igual a 1 es:
+
+$P(x \geq 1) = P(x = 1) + P(x = 2) + P(x = 3) = 0.3 + 0.1 + 0.1 = 0.5$
+
+## (C) Determinar $/mu$ x.
+
+La media o valor esperado de una variable aleatoria discreta x se calcula como:
+
+$\mu x = \sum x * p(x)$
+
+Reemplazando los valores de la tabla:
+
+$\mu x = 0 * 0.5 + 1 * 0.3 + 2 * 0.1 + 3 * 0.1 = 0.8$
+
+Por lo tanto, la media del número de defectos es $\mu x = 0.8$.
+
+### (D) Determinar $\alpha x^2$.
+
+La varianza de una variable aleatoria discreta x se calcula como:
+
+$\alpha x^2 = \sum (x - \mu x)^2 * p(x)$
+
+## 14
+Un jugador de basquetbol está a punto de tirar hacia la parte superior del tablero. La probabilidad de que anote el tiro es de $0,55$
+
+### (A) Sea $x = l$, si anota el tiro, si no $10$ hace, $x=0$. Determine la media $V$ la varianza de $x$.
+
+Sea $x$ una variable aleatoria que toma el valor 1 si anota el tiro y $0$ si no lo anota.
+La probabilidad de anotar el tiro es $0.55$
+
+La media de X se calcula como:
+
+$\mu x = E[X] = 1 * 0.55 + 0 * (1 - 0.55) = 0.55$
+
+La varianza de X se calcula como:
+
+$\alpha x^2 = E[(x - \mu x)^2] = (1 - 0.55)^2 * (1 - 0.55) + (0 - 0.55)^2 * 0.55 = 0.2475 + 0.3025 = 0.55$
+
+Por lo tanto, la media de $x$ es $\mu x = 0.55$ y la varianza de $x$ es $alpha x^2 = 0.55$.
+
+### (B) Si anota el tiro, su equipo obtiene dos puntos; si 10 falla, su equipo no recibe puntos. Sea Y el número de puntos anotados. ¿Tiene una distribución de Bernoulli? Si es así, encuentre la probabilidad de éxito. Si no, explique por qué.
+
+Sea $Y$ la variable aleatoria que representa el número de puntos anotados:
+
+Si anota el tiro, su equipo obtiene $2$ puntos, por lo que $Y = 2$.
+
+Si falla el tiro, su equipo no recibe puntos, por lo que $Y = 0$
+
+La variable Y sigue una distribución de Bernoulli, ya que:
+
+Sólo puede tomar dos valores: $0$ o $2$
+
+La probabilidad de éxito (anotar el tiro) es $0.55$
+
+Por lo tanto, Y tiene una distribución de Bernoulli con probabilidad de éxito $p = 0.55$
+
+### (C) Determinar la media y varianza de $Y$.
+
+La media de Y se calcula como:
+
+$\mu y = E[y] = 2 * 0.55 + 0 * (1 - 0.55) = 1.1$
+
+La varianza de Y se calcula como:
+
+$\alpha y^2 = E[(y - \mu y)^2] = (2 - 1.1)^2 * 0.55 + (0 - 1.1)^2 * (1 - 0.55) = 0.81 + 1.21 = 2.02$
+
+Por lo tanto, la media de $y$ es $\mu y = 1.1$ y la varianza de $y$ es $\alpha y^2 = 2.02$
+
+## 17
+Un cargamento contiene $40$ elementos. Se seleccionará de forma aleatoria y se probará cinco elementos. Si dos o más
+están defectuosos, se regresará el cargamento.
+
+### (A) Si, de hecho, eI cargamento contiene cinco elementos
+defectuosos, ¿cuál es la probabilidad de que sean aceptados (no regresados)?
+
+La probabilidad de que haya $0$ elementos defectuosos es:
+
+$P(0  \text{ defectuosos}) = C(40, 0) * (\frac{35}{40})^5 * (\frac{5}{40})^0 = 0.5778$
+
+La probabilidad de que haya $1$ elemento defectuoso es:
+
+$P(1 \text{ defectuoso}) = C(40, 1) * (\frac{35}{40})^4 * (\frac{5}{40})^1 = 0.3556$
+
+La probabilidad total de que el cargamento sea aceptado es:
+
+$P(\text{aceptado}) = P(0 \text{ defectuosos}) + P(1 \text{ defectuoso}) = 0.5778 + 0.3556 = 0.9334$
+
+### (B) Si, de hecho, el cargamento contiene diez elementos defectuosos. ¿cuál es la probabilidad de que se regresen?
+
+La probabilidad de que haya dos o más elementos defectuosos es:
+
+$P(\geq 2 \text{ defectuosos}) = 1 - P(0 \text{ defectuosos}) - P(1 \text{ defectuoso})$
+
+$P(\geq 2 \text{ defectuosos}) = 1 - 0.1185 - 0.3556 = 0.5259$
+
+## 18
+Quince automóviles son llevados a una concesionaria para validar su garantía. Suponga que cinco presentan graves problemas de motor. mientras que diez tienen problemas sin importancia, Se eligen aleatoriamente seis automóviles para componerlos. ¿Cuál es la probabilidad de que dos tengan graves problemas?
+
+Hay $15$ automóviles en total.
+
+$5$ automóviles tienen graves problemas de motor.
+
+$10$ automóviles tienen problemas sin importancia.
+
+Se seleccionan aleatoriamente $6$ automóviles para revisarlos.
+
+La probabilidad de que un automóvil seleccionado tenga graves problemas es:
+
+$P(\text{graves problemas}) = \frac{5}{15} = \frac{1}{3}$
+
+La probabilidad de que un automóvil seleccionado no tenga graves problemas es:
+
+$P(\text{sin graves problemas}) = \frac{10}{15} = \frac{2}{3}$
+
+La probabilidad de que $2$ de los $6$ automóviles seleccionados tengan graves problemas se calcula como:
+$P(2 \text{ graves problemas}) = C(6, 2) * (\frac{1}{3})^2 * (\frac{2}{3})^4 = 0.2963$
+
+## 19
+EI número de mensajes recibidos por el tablero computado de anuncios es una variable aleatoria de Poisson con una razón media de ocho mensajes por hora.
+
+### (A) ¿Cuál es la probabilidad de que se reciban cinco mensajes en una hora?
+
+$P(X = x) = \frac{e^{- \lambda t} * (\lambda t)^x}{x!}$
+
+$P(X = 5) = \frac{{e^{-8} * 8^5}}{5!} = 0.1305$
+
+### (B) ¿Cuál es la probabilidad de que se reciban diez mensajes en $1.5$ horas?
+
+Usando la misma fórmula, pero con $t = 1.5$ horas y $x = 10$ mensajes:
+
+$P(X = 10) = \frac{e^{-12} * 12^{10}}{10!} = 0.0769$
+
+### (C) ¿Cuál es la probabilidad de que se reciban menos de tres mensajes en $1\frac{1}{2}$ horas?
+
+La probabilidad de recibir menos de 3 mensajes es la suma de las probabilidades de recibir $0$ y $1$ y $2$ mensajes:
+
+$P(X < 3) = P(X = 0) + P(X = 1) + P(X = 2)$
+
+Calculando cada probabilidad:
+
+$P(X = 0) = \frac{e^{-12} * 12^0}{0!} = 0.0003$
+
+$P(X = 1) = \frac{e^{-12} * 12^1}{1!} = 0.0037$
+
+$P(X = 2) = \frac{e^{-12} * 12^2}{2!} = 0.0222$
+
+Sumando las probabilidades:
+
+$P(X < 3) = 0.0003 + 0.0037 + 0.0222 = 0.0262$
+
+## 20
+La concentración de panículas en una suspensión es $2$ por $mL$ Se agita por completo la concentración, y posteriormente se extraen $3 mL$. Sea x el número de partículas que son retiradas. Determine
+
+### (A) $P(X=5)$
+
+$P(X = 5) = \frac{e^{-6} * 6^5}{5!} = 0.1728$
+
+### (B) $P(X \leq 2 )$
+
+$P(X \leq 2) = P(X = 0) + P(X = 1) + P(X = 2)$
+
+$P(X = 0) = e^{-6} = 0.0025$
+
+$P(X = 1) = \frac{e^{-6} * 6^1}{1!} = 0.0148$
+
+$P(X = 2) = \frac{e^{-6} * 6^2}{2!} = 0.0444$
+
+$P(X \leq 2) = 0.0025 + 0.0148 + 0.0444 = 0.0617$
+
+### (C) $P(X > 1)$
+
+$P(X > 1) = 1 - P(X \leq 1)$
+
+$P(X \leq 1) = P(X = 0) + P(X = 1)$
+
+$P(X = 0) = e^{-6} = 0.0025$
+
+$P(X = 1) = \frac{e^{-6} * 6^1}{1!} = 0.0148$
+
+$P(X \leq 1) = 0.0025 + 0.0148 = 0.0173$
+
+$P(X > 1) = 1 - 0.0173 = 0.9827$
+
+### (D) $\mu_x$
+
+La media de la distribución de Poisson es igual al parámetro $\lambda$, que en este caso es $6$ partículas.
+
+$\mu x = 6$
+
+### (E) $\alpha_x$
+
+La varianza de la distribución de Poisson es igual al parámetro $\lambda$, que en este caso es 6 partículas.
+
+$\alpha x = \sqrt{6} = 2.4495$
+
+## 25 
+Determine el área bajo la curva normal
+
+### (A) A la derecha de $z = —0.85$
+
+$P(Z > -0.85) = 1 - P(Z ≤ -0.85) = 1 - 0.1977 = 0.8023$
+
+### (B) Entre $z = 0.40$ y $z = 1.3$
+
+$P(0.40 \leq Z \leq 1.30) = P(Z \leq 1.30) - P(Z \leq 0.40) = 0.9032 - 0.6554 = 0.2478$
+
+### (C) Entre $z= -0.30$ y $z = — 0.90$
+
+$P(-0.30 \leq Z \leq 0.90) = P(Z \leq 0.90) - P(Z \leq -0.30) = 0.8159 - 0.3821 = 0.4338$
+
+### (D) Desde $z = -1.50$ hasta $z = -0.45$
+
+$P(-1.50 \leq Z \leq -0.45) = P(Z \leq -0.45) - P(Z \leq -1.50) = 0.3264 - 0.0668 = 0.2596$
+
+## 26
+Las puntuaciones obtenidas en un determinado test escolar se distribuyen según una normal con media $520$ y desviación típica $94$
+
+### (A) Si la puntuación obtenida por un alumno fue $700$. ¿en cuántas veces la desviación típica esta puntuación supera a la puntuación media?
+
+$z = \frac{x - \mu}{\alpha}$
+
+$z = \frac{700 - 520}{94} = 1.91$
+
+### (B) ¿Cuál es el porcentaje de alumnos que obtienen una puntuación superior a la indicada anteriormente?
+
+$P(Z > \frac{700 - 520}{94}) = P(Z > 1.91) = 1 - P(Z \leq 1.91) = 1 - 0.9719 = 0.0281$
+
+## 27
+La variable $x$ es una variable aleatoria normal con desviación típica $3$, Si la probabilidad de que $x$ sea mayor que $16$ es $0.975$. el valor esperado de $x$ será aproximadamente:
+
+$P(X > 16) = 1 - P(X \leq 16)$
+
+Sabemos que $P(X > 16) = 0.975$, por lo que:
+
+$P(X \leq 16) = 1 - 0.975 = 0.025$
+
+$z = \frac{X - \mu}{{\alpha}$
+
+$-1.96 = \frac{16 - \mu}{3}$
+
+$\mu = 16 + 1.96 * 3 = 22$
+
+### (A) 20
+
+INCORREECTO
+
+### (B) 22
+
+CORRECTO
+
+### (C) 23
+
+INCORRECTO
+
+### (D) 25
+
+INCORRECTO
+
+## 28
+La variable $x$ es una variable aleatoria normal con valor esperado $100$ y desviación típica $2$, e $Y$ es una normal con valor esperado $105$ y desviación típica $10$. Calcule cuál de las dos variables. $X$ o $Y$, tiene mayor probabilidad de que:
+
+### (A) Sobrepase $104$
+
+Para $X: P(X > 104) = 1 - P(X \leq 104)= 1 - P(\frac{X - 100}{2}\leq 2}$ = $1 - 0.9772 = 0.0228$
+
+Para $Y: P(Y > 104) = 1 - P(Y \leq 104) = 1 - P(\frac{Y - 105}{10} \leq -0.1) = 1 - 0.5398 = 0.4602$
+
+Por lo tanto, $Y$ tiene mayor probabilidad de sobrepesar $104$
+
+### (B) Sobrepase $96$
+
+Para $X: P(X > 96) = 1 - P(X \leq 96) = 1 - P(\frac{X - 100}{2} \leq -2) = 1 - 0.0228 = 0.9772$
+
+Para $Y: P(Y > 96) = 1 - P(Y \leq 96) = 1 - P(\frac{Y - 105}{10} \leq -0.9) = 1 - 0.1841 = 0.8159$
+
+Por lo tanto, $X$ tiene mayor probabilidad de sobrepesar $96$
+
+### (C) Sobrepase $100$
+
+Para $X: P(X > 100) = 1 - P(X \leq 100) = 1 - P(\frac{X - 100}{2} \leq 0) = 1 - 0.5 = 0.5$
+
+Para $Y: P(Y > 100) = 1 - P(Y \leq 100) = 1 - P(\frac{Y - 105}{10} \leq -0.5) = 1 - 0.3085 = 0.6915$
+
+Por lo tanto, Y tiene mayor probabilidad de sobrepesar $100$
