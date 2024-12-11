@@ -1,6 +1,6 @@
 ---
-title: "Portafolio de trabajos Estadistica 1271"
-author: "Josue Chango"
+title: "Portafolio de trabajos Estadistica NRC 1271"
+author: "Josue Andel Chango Parra"
 date: "2024-11-26"
 output: html_document
 ---
@@ -1363,3 +1363,295 @@ Dado que $V(X) = SD(X)^2 = \alpha^2$, entonces $V(Y) = V(\frac{X - \mu}{\alpha})
 
 ## 1
 EI artículo "Hydrogeochemical Characteristics of Groundwater in a Mid-Western Coastal Aquifer System" (S. Jeen,J. Kim y colaboradores, Geosciences Journal, 2001:339-348) presenta las mediciones de las propiedades de algunas aguas subterráneas poco profundas en cierto sistema de acuífero de Corea. Las siguientes son las mediciones de la conductividad eléctrica (en microsiemens por centímetro) para 23 muestras de agua.
+
+\[2099-528-2030-1350-1018-384-1499\]
+\[1265-375-424-789-810-522-513\]
+\[488-200-215-486-257-557-260\]
+\[461-500\]
+
+```{r}
+# Cargar los datos
+datos <- c(528, 2030, 1350, 1018, 384, 1499, 1265, 375, 424, 789, 488, 200, 215, 486, 461, 500, 522, 557, 260, 513)
+
+# a) Encontrar la media
+media <- mean(datos)
+cat("La media es:", media, "\n")
+
+# b) Encontrar la desviación estándar
+desv_est <- sd(datos)
+cat("La desviación estándar es:", desv_est, "\n")
+
+# c) Encontrar la mediana
+mediana <- median(datos)
+cat("La mediana es:", mediana, "\n")
+
+# d) Construir un gráfico de puntos
+plot(datos, type = "p", xlab = "Muestra", ylab = "Valor")
+
+# e) Encontrar la media recortada al 10%
+media_recortada <- mean(datos, trim = 0.1)
+cat("La media recortada al 10% es:", media_recortada, "\n")
+
+# f) Encontrar el primer cuartil
+q1 <- quantile(datos, 0.25)
+cat("El primer cuartil es:", q1, "\n")
+
+# g) Encontrar el tercer cuartil
+q3 <- quantile(datos, 0.75)
+cat("El tercer cuartil es:", q3, "\n")
+
+# h) Encontrar el rango intercuartil
+iq_rango <- q3 - q1
+cat("El rango intercuartil es:", iq_rango, "\n")
+
+# i) Construir un diagrama de caja
+boxplot(datos, main = "Diagrama de Caja")
+
+# j) Identificar puntos atípicos
+outliers <- boxplot.stats(datos)$out
+if (length(outliers) > 0) {
+  cat("Los puntos atípicos son:", outliers, "\n")
+} else {
+  cat("No hay puntos atípicos.\n")
+}
+
+# k) Si se hubiera construido un histograma, ¿estaría sesgado?
+hist(datos, main = "Histograma")
+# El histograma parece estar ligeramente sesgado a la derecha, lo que indica que la distribución de los datos podría estar sesgada a la derecha.
+
+```
+
+## 2
+Cada uno de los 32 estudiantes, que forman dos secciones de laboratorio con 16 estudiantes cada una, calculó la circunferencia de una pelota de tenis a simple vista. Aquí se muestran los resultados, en centímetros. (Los resultados para el primer grupo de estudiantes también se muestran en el ejercicio 12 de la sección 1.2.)
+
+\[
+\begin{array}{|c|c|c|}
+\hline
+\textbf{Grupo 1} & \textbf{Grupo 2} \\ \hline
+18.0 & 15.0 \\ \hline
+18.0 & 18.0 \\ \hline
+18.0 & 18.0 \\ \hline
+20.0 & 19.0 \\ \hline
+22.0 & 19.0 \\ \hline
+22.0 & 19.0 \\ \hline
+22.5 & 19.5 \\ \hline
+23.0 & 19.5 \\ \hline
+24.0 & 20.0 \\ \hline
+25.0 & 20.0 \\ \hline
+25.0 & 20.0 \\ \hline
+25.0 & 20.0 \\ \hline
+26.0 & 22.0 \\ \hline
+26.0 & 24.0 \\ \hline
+26.4 & 25.0 \\ \hline
+\end{array}
+\]
+
+```{r}
+# Cargar los datos
+grupo1 <- c(18.0, 18.0, 18.0, 20.0, 22.0, 22.0, 23.0, 24.0, 25.0, 25.0, 26.0)
+grupo2 <- c(15.0, 18.0, 19.0, 19.0, 19.0, 19.0, 19.5, 20.0, 20.0, 22.0, 25.0)
+
+# a) Construir histogramas para cada grupo
+par(mfrow = c(1, 2))
+hist(grupo1, main = "Grupo 1", xlab = "Circunferencia (cm)")
+hist(grupo2, main = "Grupo 2", xlab = "Circunferencia (cm)")
+
+# b) Construir diagramas de caja comparativos
+boxplot(grupo1, grupo2, names = c("Grupo 1", "Grupo 2"), main = "Diagramas de Caja")
+
+# c) Comparar los resultados entre los grupos usando diagramas de caja
+par(mfrow = c(1, 1))
+boxplot(grupo1, grupo2, names = c("Grupo 1", "Grupo 2"), main = "Diagramas de Caja")
+# El diagrama de caja muestra que el Grupo 1 tiene una mayor dispersión de los datos y valores más altos en comparación con el Grupo 2.
+# Además, el Grupo 2 parece tener menos outliers o valores atípicos.
+```
+
+## 3
+Los siguientes valores representan las calificaciones de $32$ estudiantes que se presentaron a un examen de Estadística.
+\[55, 70, 80, 75, 90, 80, 60, 100, 95, 70, 75, 85, 80, 80, 70, 95,\]
+\[100, 80, 85, 70, 85, 90, 80, 75, 85, 70, 90, 60, 80, 70, 85, 80\]
+```{r}
+# Cargar los datos
+calificaciones <- c(55, 70, 80, 75, 90, 80, 60, 100, 95, 70, 75, 85, 80, 80, 70, 95, 
+                   100, 80, 85, 70, 85, 90, 80, 75, 85, 70, 90, 60, 80, 70, 85, 80)
+
+# Crear la tabla de frecuencias
+frecuencias <- table(calificaciones)
+freq_table <- data.frame(Calificación = names(frecuencias), Frecuencia = as.numeric(frecuencias))
+freq_table <- freq_table[order(as.numeric(freq_table$Calificación)), ]
+
+# Imprimir la tabla de frecuencias
+knitr::kable(freq_table, caption = "Tabla de Frecuencias")
+
+# Crear el gráfico de barras
+barplot(freq_table$Frecuencia, names.arg = freq_table$Calificación, 
+        main = "Gráfico de Barras de Calificaciones",
+        xlab = "Calificación", ylab = "Frecuencia")
+
+```
+## 4
+La siguiente es una clasilicación de la población de Estados Unidos por edad y sexo. Los números que aparecen en cada una de las clases están en unidades de millón.
+
+\[
+\begin{array}{|c|c|c|}
+\hline
+\textbf{Edad} & \textbf{Mujeres} & \textbf{Hombres} \\ \hline
+\text{Hasta 25 años} & 48,8 & 50,4 \\ \hline
+\text{Más de 25 años} & 74,5 & 66,6 \\ \hline
+\end{array}
+\]
+Supongamos que se elige a una persona aleatoriamente. Si A es el suceso de que la persona sea varón y B eI suceso de que su edad no sobrepase los 25 años. encuentre:
+
+```{r}
+# Datos
+poblacion <- data.frame(
+  Edad = c("Hasta 25 años", "Más de 25 años"),
+  Mujeres = c(48.8, 74.5),
+  Hombres = c(50.4, 66.6)
+)
+
+# (a) P(A) y P(AC)
+p_a <- poblacion$Hombres[2] / (poblacion$Hombres[1] + poblacion$Hombres[2])
+p_ac <- 1 - p_a
+cat("P(A) =", p_a, "\nP(AC) =", p_ac, "\n")
+
+# (b) P(B) y P(B')
+p_b <- poblacion$Hombres[1] / (poblacion$Hombres[1] + poblacion$Hombres[2])
+p_b_prima <- 1 - p_b
+cat("P(B) =", p_b, "\nP(B') =", p_b_prima, "\n")
+
+# (c) P(A|B)
+p_a_b <- poblacion$Hombres[1] / (poblacion$Hombres[1] + poblacion$Mujeres[1])
+cat("P(A|B) =", p_a_b, "\n")
+
+# (f) P(B|A)
+p_b_a <- poblacion$Hombres[1] / (poblacion$Hombres[1] + poblacion$Hombres[2])
+cat("P(B|A) =", p_b_a, "\n")
+
+```
+
+## 7
+Si $X$ es una variable aleatoria binomial con un valor esperado de y una varianza de $0,45$, encuentre:
+
+```{r}
+# Datos
+mu <- 4.5 # Valor esperado
+sigma2 <- 0.45 # Varianza
+
+# (a) P(X = 3)
+p_x_3 <- dbinom(3, size = mu / sigma2, prob = 1 / (mu / sigma2))
+cat("P(X = 3) =", p_x_3, "\n")
+
+# (b) P(X > 4)
+p_x_gt_4 <- 1 - pbinom(4, size = mu / sigma2, prob = 1 / (mu / sigma2))
+cat("P(X > 4) =", p_x_gt_4, "\n")
+```
+
+## 8
+Si $X$ es de una variable aleatoria de Poisson con media 4, calcule:
+
+```{r}
+# Datos
+lambda <- 4 # Media de la distribución de Poisson
+
+# (a) P(X = 1)
+p_x_1 <- dpois(1, lambda)
+cat("P(X = 1) =", p_x_1, "\n")
+
+# (b) P(X = 2)
+p_x_2 <- dpois(2, lambda)
+cat("P(X = 2) =", p_x_2, "\n")
+
+# (c) P(X > 2)
+p_x_gt_2 <- 1 - ppois(2, lambda)
+cat("P(X > 2) =", p_x_gt_2, "\n")
+```
+
+## 9
+EI tiempo de vida de un fusible en cierta aplicación tiene distribución exponencial con media de dos años.
+
+```{r}
+# Datos
+lambda <- 1/2 # Media de la distribución exponencial (1/μ)
+
+# (a) Valor del parámetro λ
+k <- lambda
+cat("El valor del parámetro λ es:", k, "\n")
+
+# (b) Mediana del tiempo de vida
+mediana <- log(2) / lambda
+cat("La mediana del tiempo de vida es:", mediana, "años\n")
+
+# (c) Desviación estándar
+desv_est <- 1 / lambda
+cat("La desviación estándar es:", desv_est, "años\n")
+
+# (d) Percentil 600
+percentil_600 <- qexp(0.6, rate = lambda)
+cat("El percentil 600 es:", percentil_600, "años\n")
+
+# (e) Probabilidad de que un fusible dure más de 5 años
+p_mas_5_anos <- 1 - pexp(5, rate = lambda)
+cat("La probabilidad de que un fusible dure más de 5 años es:", p_mas_5_anos, "\n")
+
+# (f) Probabilidad de que funcione 2 años más si lleva 1 año
+p_2_anos_mas <- pexp(2, rate = lambda) / (1 - pexp(1, rate = lambda))
+cat("La probabilidad de que funcione 2 años más si lleva 1 año es:", p_2_anos_mas, "\n")
+```
+
+## 10
+Suponga que la estatura de mujeres en una población sigue la curva normal con media de $64.3$ pulgadas y desviación estándar de $2.6$ pulgadas,
+
+```{r}
+# Datos
+media <- 64.3 # Media de la estatura en pulgadas
+desv_est <- 2.6 # Desviación estándar de la estatura en pulgadas
+
+# (a) Proporción de mujeres con estatura entre 60 y 66 pulgadas
+p_60_66 <- pnorm(66, mean = media, sd = desv_est) - pnorm(60, mean = media, sd = desv_est)
+cat("La proporción de mujeres con estatura entre 60 y 66 pulgadas es:", p_60_66, "\n")
+
+# (b) Proporción de mujeres con estatura mayor a 0.5 desviaciones estándar por encima de la media
+estatura_0.5_desv <- media + 0.5 * desv_est
+p_mayor_0.5_desv <- 1 - pnorm(estatura_0.5_desv, mean = media, sd = desv_est)
+cat("La proporción de mujeres con estatura mayor a 0.5 desviaciones estándar por encima de la media es:", p_mayor_0.5_desv, "\n")
+
+# (c) Estatura de la mujer en el percentil 90
+estatura_90_percentil <- qnorm(0.9, mean = media, sd = desv_est)
+cat("La estatura de la mujer en el percentil 90 es:", estatura_90_percentil, "pulgadas\n")
+```
+
+# Resumen de fórmulas
+
+\small
+
+| Nombre                           | Fórmula                                                                                                   | Descripción                                                                                              |
+|--------------------|----------------------|-------------------------------|
+| Varianza                         | $\text{Var}(X) = \frac{\sum_{i=1}^{n} (X_i - \bar{X})^2}{n}$                                              | Medida de dispersión de una variable aleatoria.                                                          |
+| Desviación Estándar              | $\sigma = \sqrt{\text{Var}(X)}$                                                                           | Raíz cuadrada de la varianza, mide la dispersión en la misma unidad que los datos.                       |
+| Probabilidad                     | $P(A) = \frac{N(A)}{N}$                                                                                   | Proporción de eventos favorables al total de eventos posibles.                                           |
+| Unión de Eventos                 | $P(A \cup B) = P(A) + P(B) - P(A \cap B)$                                                                 | Probabilidad de la unión de dos eventos.                                                                 |
+| Regla del Producto               | $P(A \cap B) = P(A) \cdot P(B)$                                                                           | Probabilidad de la intersección de dos eventos independientes.                                           |
+| Permutación                      | $P(n, r) = \frac{n!}{(n-r)!}$                                                                             | Número de maneras de ordenar r elementos de un conjunto de n.                                            |
+| Combinación                      | $C(n, r) = \frac{n!}{r!(n-r)!}$                                                                           | Número de maneras de elegir r elementos de un conjunto de n sin importar el orden.                       |
+| Prob. Eventos Independientes     | $P(A \cap B) = P(A) \cdot P(B)$                                                                           | Para eventos independientes, la probabilidad conjunta es el producto de las probabilidades individuales. |
+| Eventos Equiprobables            | $P(A) = \frac{1}{n}$                                                                                      | Probabilidad de un evento en un espacio muestral equiprobable.                                           |
+| Condicional                      | $P(A|B) = \frac{P(A \cap B)}{P(B)}$                                                                       | Probabilidad de A dado que ha ocurrido B.                                                                |
+| Regla de la Multiplicación       | $P(A \cap B) = P(A|B) \cdot P(B)$                                                                         | Relación entre la probabilidad condicional y la probabilidad marginal.                                   |
+| Probabilidad Total               | $P(B) = P(A_1) \cdot P(B|A_1) + P(A_2) \cdot P(B|A_2) + \ldots$                                           | Descomposición de la probabilidad total mediante eventos mutuamente excluyentes.                         |
+| Bayes                            | $P(A_i|B) = \frac{P(A_i) \cdot P(B|A_i)}{\sum_{j=1}^{n} P(A_j) \cdot P(B|A_j)}$                           | Fórmula de Bayes para actualizar probabilidades con nueva información.                                   |
+| F. de Dist. Acumulada            | $F(x) = P(X \leq x)$                                                                                      | Probabilidad acumulativa hasta el valor x en una distribución.                                           |
+| Esperanza Matemática             | $E(X) = \sum_{i} x_i \cdot P(X=x_i)$                                                                      | Valor esperado ponderado por las probabilidades.                                                         |
+| Media y Varianza Hipergeométrica | $\mu = \frac{N_1 \cdot n}{N}$, $\sigma^2 = \frac{N_1 \cdot N_2 \cdot n \cdot (N - n)}{N^2 \cdot (N - 1)}$ | Para la distribución hipergeométrica.                                                                    |
+| Dist. Binomial                   | $P(X = k) = \binom{n}{k} \cdot p^k \cdot (1-p)^{n-k}$                                                     | Probabilidad de obtener k éxitos en n ensayos independientes.                                            |
+| Media y Varianza Binomial          | $\mu = n \cdot p$, $\sigma^2 = n \cdot p \cdot (1-p)$       | Para la distribución binomial.                                                     |
+| Dist. Binomial Negativa            | $P(X = k) = \binom{k-1}{r-1} \cdot p^r \cdot (1-p)^{k-r}$   | Probabilidad de obtener el k-ésimo éxito en ensayos independientes.                |
+| Media y Varianza Binomial Negativa | $\mu = \frac{r}{p}$, $\sigma^2 = \frac{r \cdot (1-p)}{p^2}$ | Para la distribución binomial negativa.                                            |
+| Dist. de Poisson                   | $P(X = k) = \frac{e^{-\lambda} \cdot \lambda^k}{k!}$        | Probabilidad de k eventos en un intervalo de tiempo fijo.                          |
+| F. de Densidad Prob.               | $f(x) = \frac{d}{dx} F(x)$                                  | Derivada de la función de distribución acumulativa.                                |
+| F. de Dist. Acumulada              | $F(x) = \int_{-\infty}^{x} f(t) \, dt$                      | Integral de la función de densidad de probabilidad.                                |
+| Percentiles                        | $P_p = F^{-1}(p)$                                           | Valor que deja a la izquierda una proporción p de la distribución.                 |
+| Esperanza Matemática               | $E(X) = \int_{-\infty}^{\infty} x \cdot f(x) \, dx$         | Valor esperado de una variable aleatoria continua.                                 |
+| Varianza                           | $Var(X) = E(X^2) - [E(X)]^2$                                | Medida de dispersión para una variable aleatoria continua.                         |
+| Desviación Estándar                | $\sigma = \sqrt{Var(X)}$                                    | Raíz cuadrada de la varianza, mide la dispersión en la misma unidad que los datos. |
+| Variable Aleatoria Estándar        | $Z = \frac{X - \mu}{\sigma}$                                | Variable aleatoria estandarizada.                                                  |
